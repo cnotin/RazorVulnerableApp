@@ -1,0 +1,16 @@
+﻿<h2>Razor</h2>
+<h3>@ViewBag.Message</h3>
+<em>WARNING This code is vulnerable on purpose: do not use in production and do not take it as an example!</em>
+<p>Submit Razor code and preview:</p>
+<form action="" method="post">
+    <textarea name="razorTpl" cols="75" rows="10">@ViewBag.Template</textarea>
+    <br />
+    <input type="submit" value="Preview" />
+</form>
+<hr />
+@if (ViewBag.RenderedTemplate != null)
+{ 
+    <p>
+        @Html.Raw(ViewBag.RenderedTemplate)
+    </p>
+}
